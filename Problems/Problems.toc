@@ -1,0 +1,4 @@
+\contentsline {chapter}{\numberline {1}Gary Larson's Recommended Problems}{2}
+\contentsline {section}{\numberline {1.1}Hypatia's Problem}{2}
+\contentsline {section}{\numberline {1.2}Ramp}{2}
+\contentsline {section}{\numberline {1.3}Factor a 15th Order Polynomial}{2}

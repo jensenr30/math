@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.13)  12 MAR 2016 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.13)  12 MAR 2016 17:36
 entering extended mode
 **Problems.tex
 (Problems.tex
@@ -80,13 +80,78 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files\MiKTeX\tex\latex\geometry\geometry.sty"
-Package: geometry 2010/09/12 v5.6 Page Geometry
+("C:\Program Files\MiKTeX\tex\latex\datetime\datetime.sty"
+Package: datetime 2013/09/10 v2.59 Date Time Package
 
+("C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2015/03/10 v2.1b e-TeX tools for LaTeX (JAW)
+
+("C:\Program Files\MiKTeX\tex\latex\misc\etex.sty"
+Package: etex 2015/03/02 v2.1 eTeX basic definition package (PEB,DPC)
+\et@xins=\count100
+)
+\etb@tempcnta=\count101
+)
+("C:\Program Files\MiKTeX\tex\latex\fmtcount\fmtcount.sty"
+Package: fmtcount 2014/07/18 v3.00
+
+("C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
 ("C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
 )
+("C:\Program Files\MiKTeX\tex\latex\fmtcount\fcprefix.sty"
+Package: fcprefix 2012/09/28
+
+("C:\Program Files\MiKTeX\tex\latex\fmtcount\fcnumparser.sty"
+Package: fcnumparser 2012/09/28
+\fc@digit@counter=\count102
+))
+("C:\Program Files\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\c@padzeroesN=\count103
+\fc@tmpcatcode=\count104
+\@DT@modctr=\count105
+\@ordinalctr=\count106
+\@orgargctr=\count107
+\@strctr=\count108
+\@tmpstrctr=\count109
+\@DT@loopN=\count110
+\@DT@X=\count111
+
+("C:\Program Files\MiKTeX\tex\latex\fmtcount\fc-english.def"
+File: fc-english.def 2013/08/17
+))
+("C:\Program Files\MiKTeX\tex\latex\datetime\datetime-defaults.sty"
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count112
+\@month=\count113
+\@year=\count114
+\c@HOUR=\count115
+\c@HOURXII=\count116
+\c@MINUTE=\count117
+\c@TOHOUR=\count118
+\c@TOMINUTE=\count119
+\c@SECOND=\count120
+\currenthour=\count121
+\currentminute=\count122
+\currentsecond=\count123
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count124
+\dayofyear=\count125
+\dayofweek=\count126
+LaTeX Info: Redefining \today on input line 736.
+\dt@a=\toks20
+\dt@b=\toks21
+)
+("C:\Program Files\MiKTeX\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
 ("C:\Program Files\MiKTeX\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
@@ -95,12 +160,9 @@ Package ifpdf Info: pdfTeX in PDF mode is detected.
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-\Gm@cnth=\count100
-\Gm@cntv=\count101
-\c@Gm@tempcnt=\count102
+\Gm@cnth=\count127
+\Gm@cntv=\count128
+\c@Gm@tempcnt=\count129
 \Gm@bindingoffset=\dimen112
 \Gm@wd@mp=\dimen113
 \Gm@odd@mp=\dimen114
@@ -109,26 +171,21 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen117
 \Gm@layouthoffset=\dimen118
 \Gm@layoutvoffset=\dimen119
-\Gm@dimlist=\toks20
+\Gm@dimlist=\toks22
 
-("C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg"))
-
-LaTeX Warning: Unused global option(s):
-    [margin=2in].
-
-(Problems.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+("C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg")) (Problems.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -174,25 +231,31 @@ LaTeX Font Info:    ... okay on input line 17.
 Chapter 1.
 [2
 
+]
+Chapter 2.
+[3
+
 ] (Problems.aux) ) 
 Here is how much of TeX's memory you used:
- 1391 strings out of 493698
- 17281 string characters out of 3146030
- 79325 words of memory out of 3000000
- 4750 multiletter control sequences out of 15000+200000
- 10614 words of font info for 38 fonts, out of 3000000 for 9000
+ 2405 strings out of 493698
+ 30626 string characters out of 3146030
+ 105927 words of memory out of 3000000
+ 5733 multiletter control sequences out of 15000+200000
+ 11680 words of font info for 42 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,6n,20p,236b,181s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,6n,21p,991b,181s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx1
 0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Problems.pdf (3 pages, 93338 bytes).
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Problems.pdf (4 pages, 113613 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

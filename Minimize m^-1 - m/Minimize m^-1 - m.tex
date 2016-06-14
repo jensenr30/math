@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+% unused documentclass options:
+% twocolumn
+
+\usepackage{amsmath}
+%\numberwithin{equation}
+
+\usepackage[nodayofweek,us]{datetime}
+
+\usepackage[super]{nth}
+
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	top=1in,
+	bottom=1in,
+	left=1in,
+	right=1in
+}
+
+
+% this is used so that I can use the \phase{} command!  :)
+\usepackage{steinmetz}
+
+
+\usepackage[cm]{fullpage}
+\usepackage{lmodern,amsmath,amssymb}
+\usepackage{a4wide}
+\setlength{\marginparwidth}{3cm}
+\setlength{\topmargin}{0cm}
+\setlength{\voffset}{0cm}
+\setlength{\headsep}{0cm}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%\usepackage{indentfirst}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\begin{document}
+	
+	\title{Minimization of a Simple Complex Function}
+	
+	\section{Problem:}
+	
+	Minimize 
+	
+	\begin{equation}
+	g(m) = \frac{1}{m} - m
+	\end{equation}
+	
+	where m is a complex number.
+	
+	\section{Solution:}
+	
+	Choose to represent $m$ in vector notation where $m = M\phase{\theta}$ :
+	
+	\begin{equation}
+		g(M\phase{\theta}) = \frac{1}{M}\phase{-\theta} - M\phase{\theta}
+	\end{equation}
+	
+	where both $M$ and $\theta$ are real numbers.
+	
+	Expand this into vector notation into rectangular form:
+	
+	\begin{align*}
+		&= \frac{1}{M}[\cos{(-\theta)} + j\sin{(-\theta)}] - M[\cos{(\theta)} + j\sin{(\theta)}] \\
+		&= \frac{1}{M}\cos{\theta} - j\frac{1}{M}\sin{\theta} - M\cos{\theta} - jM\sin{\theta} \\
+		&= (\frac{1}{M}-M)\cos{\theta} - j(\frac{1}{M} + M)\sin{\theta}
+	\end{align*}
+	
+	Express the magnitude of the complex number $g(M\phase{\theta})$:
+	
+	\begin{equation}
+		|g(M\phase{\theta})| = \sqrt{\left(\left(\frac{1}{M}-M\right)\cos{\theta}\right)^2+\left(\left(\frac{1}{M} + M\right)\sin{\theta}\right)^2}
+	\end{equation}
+	
+	Minimizing the square of the magnitude is the same as minimizing the magnitude itself, and it is more convenient:
+	
+	\begin{align*}
+		|g(M\phase{\theta})|^2 &= \left(\left(\frac{1}{M}-M\right)\cos{\theta}\right)^2+\left(\left(\frac{1}{M} + M\right)\sin{\theta}\right)^2 \\
+		&= \left(\frac{1}{M}-M\right)^2\cos^{2}{\theta} + \left(\frac{1}{M} + M\right)^2\sin^{2}{\theta} \\
+		&= \left(\frac{1}{M^2}-2+M^2\right)\cos^{2}{\theta} + \left(\frac{1}{M^2}+2+M^2\right)\sin^{2}{\theta} \\
+		&= \frac{\cos^{2}{\theta}}{M^2} - 2\cos^{2}{\theta} + M^2\cos^{2}{\theta} + \frac{\sin^{2}{\theta}}{M^2} + 2\sin^{2}{\theta} + M^2\sin^{2}{\theta}
+		&= 
+	\end{align*}
+	
+\end{document}

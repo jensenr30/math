@@ -12,24 +12,26 @@
 \usepackage{geometry}
 \geometry{
 	letterpaper,
-	top=1in,
-	bottom=1in,
-	left=1in,
-	right=1in
+	top=0.5in,
+	bottom=1.2in,
+	left=0.8in,
+	right=0.8in
 }
 
 
 % this is used so that I can use the \phase{} command!  :)
 \usepackage{steinmetz}
 
+% so I can quote " " pretty  :)
+\usepackage{csquotes}
 
-\usepackage[cm]{fullpage}
-\usepackage{lmodern,amsmath,amssymb}
-\usepackage{a4wide}
-\setlength{\marginparwidth}{3cm}
-\setlength{\topmargin}{0cm}
-\setlength{\voffset}{0cm}
-\setlength{\headsep}{0cm}
+%\usepackage[cm]{fullpage}
+%\usepackage{lmodern,amsmath,amssymb}
+%\usepackage{a4wide}
+%\setlength{\marginparwidth}{3cm}
+%\setlength{\topmargin}{0cm}
+%\setlength{\voffset}{0cm}
+%\setlength{\headsep}{0cm}
 
 \usepackage{graphicx}
 \graphicspath{ {images/} }
@@ -40,34 +42,41 @@
 
 \begin{document}
 	
-	\title{Minimization of a Simple Complex Function}
+	\begin{center}
+		Minimization of a Function in the Domain of Complex Numbers
+		
+		Ryan Jensen
+		
+		\today
+	\end{center}
 	
-	\section{Problem:}
+	\section{Problem}
 	
-	Minimize 
+	Given:
 	
 	\begin{equation}
 	g(m) = \frac{1}{m} - m
 	\end{equation}
 	
-	where m is a complex number.
+	Minimize $|g(m)|$ where m is a complex number.
 	
-	\section{Solution:}
+	\section{Solution}
 	
-	Choose to represent $m$ in vector notation where $m = M\phase{\theta}$ :
+	\subsection{Expressing the Magnitude}
+	
+	Choose to represent $m$ in vector notation where $m = M\phase{\theta}$ where $M$ and $\theta$ are real numbers.
 	
 	\begin{equation}
+		\label{eq:vectorform}
 		g(M\phase{\theta}) = \frac{1}{M}\phase{-\theta} - M\phase{\theta}
 	\end{equation}
 	
-	where both $M$ and $\theta$ are real numbers.
-	
-	Expand this into vector notation into rectangular form:
+	Manipulate Equation \ref{eq:vectorform} into rectangular form:
 	
 	\begin{align*}
-		&= \frac{1}{M}[\cos{(-\theta)} + j\sin{(-\theta)}] - M[\cos{(\theta)} + j\sin{(\theta)}] \\
+		g(M\phase{\theta}) &= \frac{1}{M}[\cos{(-\theta)} + j\sin{(-\theta)}] - M[\cos{(\theta)} + j\sin{(\theta)}] \\
 		&= \frac{1}{M}\cos{\theta} - j\frac{1}{M}\sin{\theta} - M\cos{\theta} - jM\sin{\theta} \\
-		&= (\frac{1}{M}-M)\cos{\theta} - j(\frac{1}{M} + M)\sin{\theta}
+		&= \left(\frac{1}{M}-M\right)\cos{\theta} - j\left(\frac{1}{M} + M\right)\sin{\theta}
 	\end{align*}
 	
 	Express the magnitude of the complex number $g(M\phase{\theta})$:
@@ -78,12 +87,115 @@
 	
 	Minimizing the square of the magnitude is the same as minimizing the magnitude itself, and it is more convenient:
 	
+	\begin{align}
+		|g(M\phase{\theta})|^2 &= \left(\left(\frac{1}{M}-M\right)\cos{\theta}\right)^2+\left(\left(\frac{1}{M} + M\right)\sin{\theta}\right)^2 \nonumber\\
+		&= \left(\frac{1}{M}-M\right)^2\cos^{2}{\theta} + \left(\frac{1}{M} + M\right)^2\sin^{2}{\theta} \nonumber\\
+		&= \left(\frac{1}{M^2}-2+M^2\right)\cos^{2}{\theta} + \left(\frac{1}{M^2}+2+M^2\right)\sin^{2}{\theta} \nonumber\\
+		&= \frac{\cos^{2}{\theta}}{M^2} - 2\cos^{2}{\theta} + M^2\cos^{2}{\theta} + \frac{\sin^{2}{\theta}}{M^2} + 2\sin^{2}{\theta} + M^2\sin^{2}{\theta} \nonumber\\
+		&= \frac{\left(\cos^2{\theta} + \sin^2{\theta}\right)}{M^2} + 2\left(\sin^2{\theta} - \cos^2{\theta}\right) + M^2\left(\cos^2{\theta} + \sin^2{\theta}\right) \nonumber\\
+		&= \frac{1}{M^2} + 2\left(\sin^2{\theta} - \left(1 - \sin^2{\theta}\right)\right) + M^2 \nonumber\\
+		&= \frac{1}{M^2} + M^2 + 2\left(2\sin^2{\theta} - 1\right) \nonumber\\
+		\label{eq:MinimizeMeCaptain}
+		&= \frac{1}{M^2} + M^2 + 4\sin^2{\theta} - 2
+	\end{align}
+	
+	%Equation \ref{eq:MinimizeMeCaptain} will always be positive for real values of $M$ and $\theta$.
+	In order to minimize the magnitude of $g(m)$, the above line should be made to be as small as possible. Because both terms $\left(\frac{1}{M^2} + M^2\right)$ and $\left(4\sin^2{\theta}\right)$ are independent, they can be minimized separately.
+	
+	
+	
+	\subsection{Minimizing $\left(\frac{1}{M^2} + M^2\right)$}
+	
+	To find the local maxima and minima of $\left(\frac{1}{M^2} + M^2\right)$, take the derivative of the function and set it equal to zero:
+	
 	\begin{align*}
-		|g(M\phase{\theta})|^2 &= \left(\left(\frac{1}{M}-M\right)\cos{\theta}\right)^2+\left(\left(\frac{1}{M} + M\right)\sin{\theta}\right)^2 \\
-		&= \left(\frac{1}{M}-M\right)^2\cos^{2}{\theta} + \left(\frac{1}{M} + M\right)^2\sin^{2}{\theta} \\
-		&= \left(\frac{1}{M^2}-2+M^2\right)\cos^{2}{\theta} + \left(\frac{1}{M^2}+2+M^2\right)\sin^{2}{\theta} \\
-		&= \frac{\cos^{2}{\theta}}{M^2} - 2\cos^{2}{\theta} + M^2\cos^{2}{\theta} + \frac{\sin^{2}{\theta}}{M^2} + 2\sin^{2}{\theta} + M^2\sin^{2}{\theta}
-		&= 
+		\frac{d}{dM}\left(\frac{1}{M^2} + M^2\right) &= 0 \\
+		-2\frac{1}{M^3} + 2M &= 0 \\
+		\frac{1}{M^3} - M &= 0 \\
+		1 - M^4 &= 0 \\
+		M^4 &= 1 \\
+		M &= \sqrt[4]{1} \\
+		M &= 1, j, -1, -j 
 	\end{align*}
+	
+	There are four solutions, but only 1 and -1 are relevant to the original problem statement. This is because M, being the magnitude of the vector m, is a real number.
+	
+	To determine if these values of $M$ are local minima or maxima, the function $\left(\frac{1}{M^2} + M^2\right)$ is differentiated twice, and the sign of the function is analyzed.
+	
+	\begin{equation}
+	\label{eq:secderivM}
+	\frac{d^2}{dM^2}\left(\frac{1}{M^2} + M^2\right) = \frac{d}{dM}\left(-2\frac{1}{M^3} + 2M\right) = 6\frac{1}{M^4} + 2 
+	\end{equation}
+	
+	Equation \ref{eq:secderivM} is always positive for real values of $M$. Therefore, all local extrema of the $\left(\frac{1}{M^2} + M^2\right)$ are local minima.
+	
+	Considering the \enquote{endpoints}: when $M \to-\infty$ or $M \to+\infty$, the expression $\left(\frac{1}{M^2} + M^2\right)\to\infty$. These two cases can be ignored in the search for the minimum. Hence, we are left with:
+	
+	\begin{equation}
+		M = \pm1
+	\end{equation}
+	
+	\subsection{Minimizing $\left(4\sin^2{\theta}\right)$}
+	
+	To minimize $\left(4\sin^2{\theta}\right)$, take the derivative of the function and set it equal to zero to find the local extrema:
+	
+	\begin{align*}
+		\frac{d}{d\theta}\left(4\sin^2{\theta}\right) &= 0 \\
+		\frac{d}{d\theta}\sin^2{\theta} &= 0 \\
+		\frac{d}{d\theta}\sin{\theta}\sin{\theta} &= 0 \\
+		2\sin{\theta}\cos{\theta} &= 0 \\
+		\sin{\theta}\cos{\theta} &= 0 \\
+		\theta &= \frac{k}{2}\pi \qquad\text{where k is any integer}
+	\end{align*}
+	
+	$4\sin^2{\left(\frac{k}{2}\pi\right)}$ equals 4 for any odd integer k.
+	
+	$4\sin^2{\left(\frac{k}{2}\pi\right)}$ equals 0 for any even integer k.
+	
+	Therefore, even values of k will minimize $\left(4\sin^2{\theta}\right)$.
+	
+	\begin{align}
+		\theta &= k\pi \qquad\text{where k is any integer} \\
+		\theta &= \cdots, -2\pi, -\pi, 0, \pi, 2\pi, \cdots \nonumber
+	\end{align}
+	
+	
+	\newpage
+	\section{Conclusion}
+	
+	The conditions which yield minimum $|g(M\phase{\theta})|$ are: $M = \pm1$ while simultaneously $\theta$ is an integer multiple of $\pi$.
+	
+	Expressing this in terms of the original complex number, $m$, yields:
+	
+	\begin{equation}
+		m = \pm1
+	\end{equation}
+	
+	Evaluating $|g(m)|$ at these values of $m$ yields:
+	
+	\begin{equation}
+	|g(1)| = \left|\frac{1}{(1)} - (1)\right| = |1 - 1| = |0| = 0
+	\end{equation}
+	
+	\begin{equation}
+	|g(-1)| = \left|\frac{1}{(-1)} - (-1)\right| = |-1 + 1| = |0| = 0
+	\end{equation}
+	
+	$|g(m)|$ doesn't minimize more than that.
+	
+	\section {Alternative Solution}
+	
+	\begin{enumerate}
+		\item Assume there are values of $m$ which make $|g(m)| = 0$ 
+		\item Recognize that $|g(m)| = 0$ only when $g(m) = 0$
+		\item Solve for $g(m) = 0$
+	\end{enumerate}
+	
+	\begin{align}
+		g(m) = \frac{1}{m} - m &= 0 \qquad (m \neq 0) \nonumber \\
+		1 - m^2 &= 0 \nonumber \\
+		m^2 &= 1 \nonumber \\
+		m &= \pm1
+	\end{align}
 	
 \end{document}
